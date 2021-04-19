@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".pages.HomeFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="Popular Movies"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
-</FrameLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popular_movies_rv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="160dp"/>
+
+        <TextView
+            android:text="Top Rated"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/top_rated_rv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="160dp"/>
+
+        <TextView
+            android:text="Upcomming"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upcomming_rv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="160dp"/>
+
+    </LinearLayout>
+
+</layout>
